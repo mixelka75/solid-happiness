@@ -25,7 +25,7 @@ fields_for_format = ['client_id', 'client_first_name', 'client_middle_name', 'cl
 
 def _check_bdata_or_ymd(data: str) -> str | None:
     try:
-        datetime.datetime.strptime(data, "%Y %m %d")
+        datetime.datetime.strptime(data, "%Y-%m-%d")
         return data
     except:
         return None
