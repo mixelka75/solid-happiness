@@ -1,0 +1,103 @@
+/* UploadPage.module.css */
+.container {
+  background: linear-gradient(135deg, #f0f0f0 25%, #d0d0d0 100%);
+  padding: 5vw;
+  max-width: 600px;
+  margin: 10vh auto;
+  border: 2px solid #000;
+  box-shadow: 5vw 5vw 0px 0px #000;
+}
+
+.title {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  font-size: 6vw;
+  margin-bottom: 5vh;
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputWrapper input[type="file"] {
+  margin-bottom: 5vh;
+  font-size: 4vw;
+}
+
+.button {
+  background-color: #ff00ff;
+  color: #fff;
+  border: none;
+  padding: 3vh 5vw;
+  font-size: 4vw;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+  box-shadow: 1vw 1vw 0px 0px #000;
+}
+
+.button:hover {
+  background-color: #e600e6;
+}
+
+.progressBar {
+  width: 100%;
+  background-color: #ccc;
+  border: 2px solid #000;
+  margin-top: 5vh;
+  position: relative;
+  height: 5vh;
+}
+
+.progressBar div {
+  height: 100%;
+  background-color: #00ff00;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+.progressText {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 1vh;
+  font-family: "Press Start 2P", cursive;
+  font-size: 3vw;
+}
+
+/* Адаптивные стили для больших экранов */
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+    margin: 50px auto;
+    box-shadow: 10px 10px 0px 0px #000;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .inputWrapper input[type="file"] {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .button {
+    padding: 15px 30px;
+    font-size: 18px;
+    box-shadow: 5px 5px 0px 0px #000;
+  }
+
+  .progressBar {
+    height: 30px;
+    margin-top: 20px;
+  }
+
+  .progressText {
+    top: 5px;
+    font-size: 16px;
+  }
+}

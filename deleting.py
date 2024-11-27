@@ -4,7 +4,7 @@ from datetime import datetime
 import format
 
 
-def get_cleaned_arrow():
+def get_cleaned_arrow(filename):
     # Проверка номера телефона
     def is_valid_phone(phone):
         phone = str(phone)  # Приведение к строке
@@ -90,7 +90,7 @@ def get_cleaned_arrow():
 
     rrrrrrr = []
 
-    with open('ds_dirty_fin_202410041147.csv', encoding='utf-8') as csvfile:
+    with open(f'uploads/{filename}', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
 
         # Чтение и фильтрация данных
