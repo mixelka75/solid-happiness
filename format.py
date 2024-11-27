@@ -49,13 +49,13 @@ def dict_to_formated_dict(kwarg: dict) -> dict | None:
 
     formatting_rules = {
         "client_id": lambda x: x,
-        "client_first_name": lambda x: x.title(),
-        "client_middle_name": lambda x: x.title(),
-        "client_last_name": lambda x: x.title(),
-        "client_fio_full": lambda x: x if len(x.split()) == 3 else None,
+        "client_first_name": lambda x: x.lower(),
+        "client_middle_name": lambda x: x.lower(),
+        "client_last_name": lambda x: x.lower(),
+        "client_fio_full": lambda x: x.lower() if len(x.split()) == 3 else None,
         "client_bday": lambda x: _check_bdata_or_ymd(str(x)),
         "client_bplace": lambda x: x,
-        "client_cityzen": lambda x: x.upper(),
+        "client_cityzen": lambda x: x.lower(),
         "contact_email": lambda x: x.lower(),
         "contact_phone": lambda x: x if len(''.join(x.split())) == 12 else None,
         "create_date": lambda x: _check_data(str(x)),
