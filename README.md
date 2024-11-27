@@ -1,7 +1,16 @@
 # Инструкция по установке fastapi и запуску его
 
-`pip install fastapi`
-`pip install uvicorn`
+```bash
+pip install fastapi
+```
+
+```bash
+pip install uvicorn
+```
+
+```bash
+uvicorn app:app --reload
+```
 
 # Инструкция по установке React и запуску кго
 
