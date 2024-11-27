@@ -45,7 +45,7 @@ def _check_data(data: str) -> str | None:
     return None
 
 
-def dict_to_formated_dict(kwarg: dict) -> dict:
+def dict_to_formated_dict(kwarg: dict) -> dict | None:
 
     formatting_rules = {
         "client_id": lambda x: x,
