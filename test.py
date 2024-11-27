@@ -8,7 +8,7 @@ dtype_dict = {
     'addr_body': 'object',
     'addr_flat': 'object',
     'addr_house': 'object',
-    'addr_loc': 'object',
+    'addr_loc': 'object232',
     'addr_zip': 'object',
     'contact_tg': 'object',
     'contact_vc': 'object',
