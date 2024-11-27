@@ -57,7 +57,7 @@ def dict_to_formated_dict(kwarg: dict) -> dict:
         "client_bplace": lambda x: x,
         "client_cityzen": lambda x: x.upper(),
         "contact_email": lambda x: x.lower(),
-        "contact_phone": lambda x: x if len(''.join(x.split()))-1 == 12 else None,
+        "contact_phone": lambda x: x if len(''.join(x.split())) == 12 else None,
         "create_date": lambda x: _check_data(str(x)),
         "update_date": lambda x: _check_data(str(x))
     }
