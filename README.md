@@ -103,21 +103,3 @@ npm start
 [http://localhost:3000](http://localhost:3000)
 
 ---
-
-## 6. Примечания
-
-- Если проект содержит дополнительные скрипты в `package.json`, ознакомьтесь с ними:
-
-  ```json
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test"
-  }
-  ```
-
-  Используйте их для запуска, сборки и тестирования приложения.
-
-- Если требуется установить дополнительные пакеты, выполните их установку через `npm install`.
-
----
