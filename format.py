@@ -20,8 +20,8 @@ import datetime
 
 fields_for_format = ['client_id', 'client_first_name', 'client_middle_name', 'client_last_name',
                      'client_fio_full', 'client_bday', 'client_bplace', 'client_cityzen', 'client_cityzen',
-                     'contact_email', 'contact_phone', 'create_date', 'update_date''addr_street', 'addr_house', 
-                     'addr_body', 'addr_flat', 'addr_area', 'addr_loc', 'addr_city', 'addr_reg_dt', 'addr_str']
+                     'contact_email', 'contact_phone', 'create_date', 'update_date','addr_street', 'addr_house',
+                      'addr_body', 'addr_flat', 'addr_area', 'addr_loc', 'addr_city', 'addr_reg_dt', 'addr_str']
 
 
 def _check_bdata_or_ymd(data: str) -> str | None:
@@ -49,18 +49,18 @@ def _check_data(data: str) -> str | None:
 def dict_to_formated_dict(kwarg: dict) -> dict | None:
 
     formatting_rules = {
-        "client_id": lambda x: str(x).lower(),
-        "client_first_name": lambda x: str(x).title().lower(),
-        "client_middle_name": lambda x: str(x).title().lower(),
-        "client_last_name": lambda x: str(x).title().lower(),
-        "client_fio_full": lambda x: str(x).lower() if len(x.split()) == 3 else None,
-        "client_bday": lambda x: _check_bdata_or_ymd(str(x).lower()),
-        "client_bplace": lambda x: str(x).lower(),
-        "client_cityzen": lambda x: str(x).upper().lower(),
-        "contact_email": lambda x: str(x).lower(),
-        "contact_phone": lambda x: str(x).lower() if len(''.join(x.split())) - 1 == 12 else None,
-        "create_date": lambda x: _check_data(str(x).lower()),
-        "update_date": lambda x: _check_data(str(x).lower()),
+        "client_id": lambda x: x,
+        "client_first_name": lambda x: x.lower(),
+        "client_middle_name": lambda x: x.lower(),
+        "client_last_name": lambda x: x.lower(),
+        "client_fio_full": lambda x: x.lower() if len(x.split()) == 3 else None,
+        "client_bday": lambda x: _check_bdata_or_ymd(str(x)),
+        "client_bplace": lambda x: x.lower(),
+        "client_cityzen": lambda x: x.lower(),
+        "contact_email": lambda x: x.lower(),
+        "contact_phone": lambda x: x if len(''.join(x.split())) == 12 else None,
+        "create_date": lambda x: _check_data(str(x)),
+        "update_date": lambda x: _check_data(str(x)),
         "addr_street": lambda x: str(x).lower(),
         "addr_house": lambda x: str(x).lower(),
         "addr_body": lambda x: str(x).lower(),
@@ -71,8 +71,6 @@ def dict_to_formated_dict(kwarg: dict) -> dict | None:
         "addr_reg_dt": lambda x: str(x).lower(),
         "addr_str": lambda x: str(x).lower()
     }
-
-
 
     format_dict = {key: formatting_rules[key](value)
                     if key in fields_for_format and formatting_rules[key](value) is not None else value
