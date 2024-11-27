@@ -16,55 +16,6 @@ import datetime
 # contact_phone
 # create_date
 # update_date
-x = {
-        "client_id": 807719023,
-        "client_first_name": "Хабибат",
-        "client_middle_name": "Махмашариповна",
-        "client_last_name": "Чичева",
-        "client_fio_full": "Чичева Хабибат Махмашариповна",
-        "client_bday": "1948-04-16",
-        "client_bplace": "",
-        "client_cityzen": "",
-        "client_resident_cd": None,
-        "client_gender": "Ж",
-        "client_marital_cd": None,
-        "client_graduate": "",
-        "client_child_cnt": 1,
-        "client_mil_cd": None,
-        "client_zagran_cd": "",
-        "client_inn": "",
-        "client_snils": "",
-        "client_vip_cd": "",
-        "contact_vc": "",
-        "contact_tg": "",
-        "contact_other": "",
-        "contact_email": "hiheva@dirtythird.com",
-        "contact_phone": "+7 951 900 3326",
-        "addr_region": "",
-        "addr_country": "",
-        "addr_zip": "",
-        "addr_street": "",
-        "addr_house": "",
-        "addr_body": "",
-        "addr_flat": "",
-        "addr_area": "",
-        "addr_loc": "",
-        "addr_city": "",
-        "addr_reg_dt": "",
-        "addr_str": "hiheva@dirtythird.com",
-        "fin_rating": None,
-        "fin_loan_limit": None,
-        "fin_loan_value": None,
-        "fin_loan_debt": None,
-        "fin_loan_percent": None,
-        "fin_loan_begin_dt": "2021-04-08 10:05:54.722",
-        "fin_loan_end_dt": "2021-04-08 10:05:54.722",
-        "stream_favorite_show": "Once Upon a Time in Hollywood",
-        "stream_duration": 407,
-        "create_date": "2021-04-08 10:05:54.722",
-        "update_date": "2021-04-08 10:05:54.722",
-        "source_cd": "Stream"
-    }
 
 
 fields_for_format = ['client_id', 'client_first_name', 'client_middle_name', 'client_last_name',
@@ -116,5 +67,3 @@ def dict_to_formated_dict(kwarg: dict) -> dict:
                     for key, value in kwarg.items()}
 
     return format_dict if len(kwarg) == len(format_dict) else None
-
-print(dict_to_formated_dict(x))
