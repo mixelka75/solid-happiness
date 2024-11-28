@@ -2,7 +2,7 @@ from datetime import datetime
 
 def group_related_records(records):
     # Ключи, по которым будем искать связи
-    keys_of_interest = ['client_id', 'client_inn', 'client_snils', 'contact_email', 'contact_phone']
+    keys_of_interest = ['client_inn', 'client_snils', 'contact_email', 'contact_phone']
     
     # Инициализация структуры Union-Find
     parents = [i for i in range(len(records))]
